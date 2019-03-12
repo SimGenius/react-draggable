@@ -1199,14 +1199,14 @@
 	      y = _ref.y;
 
 	  // Replace unitless items with px
-	  return defineProperty({}, browserPrefixToKey('transform', browserPrefix), 'translate(' + x + 'px,' + y + 'px)');
+	  return defineProperty({}, browserPrefixToKey('transform', browserPrefix), 'translate3d(' + x + 'px,' + y + 'px,0px)');
 	}
 
 	function createSVGTransform(_ref3) /*: string*/ {
 	  var x = _ref3.x,
 	      y = _ref3.y;
 
-	  return 'translate(' + x + ',' + y + ')';
+	  return 'translate3d(' + x + ',' + y + ',0)';
 	}
 
 	function getTouch(e /*: MouseTouchEvent*/, identifier /*: number*/) /*: ?{clientX: number, clientY: number}*/ {
